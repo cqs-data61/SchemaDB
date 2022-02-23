@@ -1,0 +1,135 @@
+DROP DATABASE IF EXISTS "schema2094";
+CREATE DATABASE "schema2094";
+USE "schema2094";
+CREATE TABLE "hpd_violation" (
+	"violationid" INTEGER,
+	"buildingid" INTEGER,
+	"registrationid" INTEGER,
+	"boroid" SMALLINT,
+	"boro" TEXT,
+	"housenumber" TEXT,
+	"lowhousenumber" TEXT,
+	"highhousenumber" TEXT,
+	"streetname" TEXT,
+	"streetcode" TEXT,
+	"zip" INTEGER,
+	"apartment" TEXT,
+	"story" TEXT,
+	"block" INTEGER,
+	"lot" SMALLINT,
+	"class" CHAR,
+	"inspectiondate" DATE,
+	"approveddate" DATE,
+	"originalcertifybydate" DATE,
+	"originalcorrectbydate" DATE,
+	"newcertifybydate" DATE,
+	"newcorrectbydate" DATE,
+	"certifieddate" DATE,
+	"ordernumber" TEXT,
+	"novid" INTEGER,
+	"novdescription" TEXT,
+	"novissueddate" DATE,
+	"currentstatusid" SMALLINT,
+	"currentstatus" TEXT,
+	"currentstatusdate" DATE,
+	 PRIMARY KEY ("violationid")
+);
+
+CREATE TABLE "hpd_complaint" (
+	"complaintid" INTEGER,
+	"buildingid" INTEGER,
+	"boroughid" SMALLINT,
+	"borough" TEXT,
+	"housenumber" TEXT,
+	"streetname" TEXT,
+	"zip" INTEGER,
+	"block" INTEGER,
+	"lot" SMALLINT,
+	"apartment" TEXT,
+	"communityboard" SMALLINT,
+	"receiveddate" DATE,
+	"statusid" SMALLINT,
+	"status" TEXT,
+	"statusdate" DATE,
+	 PRIMARY KEY ("complaintid")
+);
+
+CREATE TABLE "hpd_legal" (
+	"litigationid" INTEGER,
+	"buildingid" INTEGER,
+	"boroid" SMALLINT,
+	"boro" TEXT,
+	"housenumber" TEXT,
+	"streetname" TEXT,
+	"zip" INTEGER,
+	"block" INTEGER,
+	"lot" SMALLINT,
+	"casetype" TEXT,
+	"caseopendate" DATE,
+	"casestatus" TEXT,
+	"casejudgement" TEXT,
+	 PRIMARY KEY ("litigationid")
+);
+
+CREATE TABLE "hpd_contact" (
+	"registrationcontactid" INTEGER,
+	"registrationid" INTEGER,
+	"contacttype" TEXT,
+	"contactdescription" TEXT,
+	"corporationname" TEXT,
+	"title" TEXT,
+	"firstname" TEXT,
+	"middleinitial" TEXT,
+	"lastname" TEXT,
+	"businesshousenumber" TEXT,
+	"businessstreetname" TEXT,
+	"businessapartment" TEXT,
+	"businesscity" TEXT,
+	"businessstate" TEXT,
+	"businesszip" TEXT
+);
+
+CREATE TABLE "hpd_registration" (
+	"registrationid" INTEGER,
+	"buildingid" INTEGER,
+	"boroid" SMALLINT,
+	"boro" TEXT,
+	"housenumber" TEXT,
+	"lowhousenumber" TEXT,
+	"highhousenumber" TEXT,
+	"streetname" TEXT,
+	"streetcode" TEXT,
+	"zip" TEXT,
+	"block" INTEGER,
+	"lot" SMALLINT,
+	"bin" INTEGER,
+	"communityboard" SMALLINT,
+	"lastregistrationdate" DATE,
+	"registrationenddate" DATE
+);
+
+CREATE TABLE "hpd_building" (
+	"buildingid" INTEGER,
+	"boroid" SMALLINT,
+	"boro" TEXT,
+	"housenumber" TEXT,
+	"lowhousenumber" TEXT,
+	"highhousenumber" TEXT,
+	"streetname" TEXT,
+	"zip" TEXT,
+	"block" INTEGER,
+	"lot" SMALLINT,
+	"bin" INTEGER,
+	"communityboard" SMALLINT,
+	"censustract" TEXT,
+	"managementprogram" TEXT,
+	"dobbuildingclassid" SMALLINT,
+	"dobbuildingclass" TEXT,
+	"legalstories" INTEGER,
+	"legalclassa" INTEGER,
+	"legalclassb" INTEGER,
+	"registrationid" INTEGER,
+	"lifecycle" TEXT,
+	"recordstatusid" SMALLINT,
+	"recordstatus" TEXT
+);

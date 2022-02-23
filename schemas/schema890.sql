@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS "schema890";
+CREATE DATABASE "schema890";
+USE "schema890";

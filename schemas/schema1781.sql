@@ -1,0 +1,12 @@
+DROP DATABASE IF EXISTS "schema1781";
+CREATE DATABASE "schema1781";
+USE "schema1781";
+CREATE TABLE "bar" (
+	"c1" INTEGER,
+	"c2" BOOLEAN
+);
+
+CREATE TABLE "foo" (
+	"c1" INTEGER,
+	"c2" TEXT
+);

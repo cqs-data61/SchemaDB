@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "Debug ANTLR4 grammar",
+            "type": "antlr-debug",
+            "request": "launch",
+            "input": "../sql*/acbewley-the-coworker-name-rememberer/schema.sql",
+            "grammar": "postgresSQLParser.g4",
+            "startRule": "sql",
+            "printParseTree": true,
+            "visualParseTree": true
+        }
+    ]
+}

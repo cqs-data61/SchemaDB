@@ -1,6 +1,6 @@
 # SchemaDB
 
-A dataset of ~2500 relational SQL anonymised schemas found on github.
+A dataset of ~2500 anonymisted relational SQL schemas found on github.
 
 Included in this release are primarily:
 * Reparsed Schema (MySql Compatible)
